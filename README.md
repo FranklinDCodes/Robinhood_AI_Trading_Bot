@@ -13,6 +13,9 @@ A bot that places orders on Robinhood based on feedback from a series of PyTorch
   market_data_LSTM.py: 
     Produces live or historical stock market data as input for training or getting information from neural networks.
 
+  sql_tools.py: 
+    Contains the class db() that is used to manipulate sqlite databases.
+
   
   nets/ 
   

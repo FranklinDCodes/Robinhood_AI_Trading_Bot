@@ -12,22 +12,13 @@ A bot that places orders on Robinhood based on feedback from a series of PyTorch
   
   market_data_LSTM.py: 
     Produces live or historical stock market data as input for training or getting information from neural networks.
-  
+
   
   nets/ 
   
       Contains 15 different neural networks that each were trained on a unique list of stocks.
-  
-  
-  logs/ 
-  
-      id.txt: 
-        A perpetually counting value used by main.py to assign unique ids to market orders in logs.db and other files.
-  
-      logs.db: 
-        A database containing multiple different logs to record any trades made by main.py
-  
-  
+
+
   operating_data/ 
   
       unconfirmed.csv: 
@@ -44,3 +35,24 @@ A bot that places orders on Robinhood based on feedback from a series of PyTorch
         
       pw.txt: 
         The ecrypted digits of the Robinhood password (it's just "password" at the moment).
+
+  
+  logs/ 
+  
+      id.txt: 
+        A perpetually counting value used by main.py to assign unique ids to market orders in logs.db and other files.
+  
+      logs.db: 
+        A database containing multiple different logs to record any trades made by main.py
+
+
+  nn_generator/
+
+      network_trainer.py: 
+        The code that generated and trained neural networks in the nets directory.
+
+      market_data_LSTM.py:
+        Same as in root directory, used for fetching historical market data from market_data_12_year.db to train the neural networks.
+
+      market_data_12_year.db:
+        NOT PRESENT IN REPOSITORY. Too large to upload, but it contains 12 years of historical data on each the stocks that the neural networks are trained on.

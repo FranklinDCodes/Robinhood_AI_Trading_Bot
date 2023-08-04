@@ -31,10 +31,10 @@ A bot that places orders on Robinhood based on feedback from a series of PyTorch
         A date string of the last time purchases were made. Just to make sure AI reccomendations are only purchased once a day.
         
       otp.txt: 
-        The code required to generate a one time OTP to login to Robinhood.
+        The code required to generate a one time OTP to login to Robinhood (it's currently just 0s, not a legitimate code).
         
       pw.txt: 
-        The ecrypted digits of the Robinhood password (it's just "password" at the moment).
+        The ecrypted digits of the Robinhood password (it's just "password," not an actual password).
 
   
   logs/ 

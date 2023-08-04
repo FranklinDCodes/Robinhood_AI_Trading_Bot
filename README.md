@@ -2,7 +2,7 @@
 A bot that places orders on Robinhood based on feedback from a series of PyTorch neural networks.
 
 
-+----- File Descriptions -----+
+|----- File Descriptions -----|
 
 main.py: 
   This code loops infinitly, looking to make profitable sales during market hours, and making purchases near market close based on neural network feedback.
@@ -14,12 +14,12 @@ market_data_LSTM.py:
   Produces live or historical stock market data as input for training or getting information from neural networks.
 
 
-nets/: 
+nets/ 
 
     Contains 15 different neural networks that each were trained on a unique list of stocks.
 
 
-logs/: 
+logs/ 
 
     id.txt: 
       A perpetually counting value used by main.py to assign unique ids to market orders in logs.db and other files.
@@ -28,7 +28,7 @@ logs/:
       A database containing multiple different logs to record any trades made by main.py
 
 
-operating_data/: 
+operating_data/ 
 
     unconfirmed.csv: 
       A list of placed but unexecuted buy and sell orders.

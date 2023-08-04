@@ -2,7 +2,7 @@
 A bot that places orders on Robinhood based on feedback from a series of PyTorch neural networks.
 
 
-<----- File Descriptions ----->
+------ File Descriptions ------
 
   main.py: 
     This code loops infinitly, looking to make profitable sales during market hours, and making purchases near market close based on neural network feedback.

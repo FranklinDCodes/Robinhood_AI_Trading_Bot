@@ -259,7 +259,7 @@ def set_pw_file(new_pass):
 
         encrypted_lines.append(sha256(char.encode("utf-8")).hexdigest())
 
-    write("pw.txt", encrypted_lines)
+    write(path.join(OP_DATA_DIR, "pw.txt"), encrypted_lines)
 
     return 0
 def get_pw():
@@ -276,7 +276,7 @@ def get_pw():
      '+', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     
     # open encrypted pw
-    for line in read("pw.txt"):
+    for line in read(path.join(OP_DATA_DIR, "pw.txt")):
 
         # remove new lines
         if line[-1] == "\n":
@@ -292,7 +292,7 @@ def get_pw():
 
 # login
 def robin_login():
-    totp = pyotp.TOTP(read('otp.txt')[0]).now()
+    totp = pyotp.TOTP(read(path.join(OP_DATA_DIR, 'otp.txt'))[0]).now()
     robin_login = r.login("emil@email.com", get_pw(), mfa_code=totp, store_session=False)
     return robin_login
 
